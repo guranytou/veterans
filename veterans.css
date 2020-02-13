@@ -1,0 +1,92 @@
+body{
+  font-family: "游ゴシック", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  background-color: #bbe2f1;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+
+fieldset{
+  width: 550px;
+  border: 0px solid;
+  background-color: rgba(255,255,255,0.7);;
+  margin-top: 20px;
+  color: black;
+  border-radius: 5px;
+  word-break: break-all;
+}
+
+.note{
+  color: red;
+  font-size: 13px;
+}
+
+.boxInput{
+  margin-left: 50px;
+}
+
+.veteranInput{
+  margin-left: 18px;
+}
+
+.nowBoxInput{
+  margin-left: 50px;
+}
+
+input{
+  width: 100px;
+  text-align: right;
+}
+
+.hellCheckInput{
+  width: auto;
+  margin-left:60px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance:textfield;
+}
+
+button{
+  float: right;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #67c5ff;
+  border: solid 1px #67c5ff;
+  border-radius: 3px;
+  transition: .4s;
+  background-color: white;
+}
+
+button:hover {
+    background: #67c5ff;
+    color: white;
+}
+
+hr {
+  border-top: 1px dashed #bbb;
+}
+
+@media(max-width: 1024px){
+  fieldset{
+       width: 90%;
+    }
+}
+@media(max-width: 600px){
+  fieldset{
+       width: 90%;
+  }
+  button{
+    margin-top:10px;
+  }
+  .hellCheckInput{
+    margin-left:50px;
+  }
+}

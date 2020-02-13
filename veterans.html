@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>イベント用箱掘り計算機</title>
+    <link rel="stylesheet" type="text/css" href="veterans.css">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-157577404-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-157577404-1');
+</script>
+
+</head>
+<body>
+      <div>
+              <H2>いべんとはしれ</H2>
+      </div>
+        <fieldset class="inputFieldset">
+          <div>
+              <span>目標箱数</span>
+              <input type="number" data-bind="value: boxCount" class="boxInput"/><span>箱</span>
+          </div>
+          <div>
+            <span>現在の戦果数</span>
+            <input type="number" data-bind="value: nowVeterans" class="veteranInput"/><span>枚</span>
+          </div>
+          <div>
+            <span>現在の箱</span>
+            <input type="number" data-bind="value: nowBox" class="nowBoxInput"/><span>箱目</span>
+          </div>
+          <div>
+            <span>HELLを処理するか</span>
+            <input type="checkbox" data-bind="checked: hellCheck" class="hellCheckInput"/><span>処理する</span>
+          </div>
+            <button type="button" data-bind="click:checkVeterans">掘るぞい</button>
+        </fieldset>
+        <fieldset class="note">
+          注意：HELLは確率での出現のため、表示された数と異なることがあります。
+        </fieldset>
+        <fieldset>
+          <div>
+            <span>必要戦果数&nbsp;</span><span data-bind="text:veterans"></span><span>枚</span>
+          </div>
+          <hr>
+        <div>
+          <div>
+	          <span>VH+EXをソロで処理する場合</span><br>
+            <span>・VH自発処理：&nbsp;</span><span data-bind="text:veryhardEX"></span><span>体</span>
+          </div>
+          <div>
+            <span>・EX自発処理：&nbsp;</span><span data-bind="text:extreme"></span><span>体</span>
+          </div>
+          <div>
+            <span>・HELL処理：&nbsp;</span><span data-bind="text:hellEX"></span><span>体</span>
+          </div>
+          <div>
+            <span>・必要トリガー数：&nbsp;</span><span data-bind="text:extremeTriger"></span><span>個</span>
+          </div>
+        </div>
+        <hr>
+        <div>
+          <div>
+	          <span>VH+HLをソロで処理する場合</span><br>
+            <span>・VH自発処理：&nbsp;</span><span data-bind="text:veryhardHL"></span><span>体</span>
+          </div>
+          <div>
+            <span>・HL自発処理：&nbsp;</span><span data-bind="text:highlevel"></span><span>体</span>
+          </div>
+          <div>
+            <span>・HELL処理：&nbsp;</span><span data-bind="text:hellHL"></span><span>体</span>
+          </div>
+          <div>
+            <span>・必要トリガー数：&nbsp;</span><span data-bind="text:highlevelTriger"></span><span>個</span>
+          </div>
+        </div>
+        </fieldset>
+        <fieldset>
+          <div>
+            <h3>ストイベ用箱掘り計算機 Ver.2.0</h3>
+            <span>このサイトはグランブルファンタジーのストイベ用箱掘り計算機です。</span><br>
+            <span>作者が時々メンテするため、見栄えや計算結果が変わることがあります。</span><br>
+            <span>また、誤差があるかもしれませんがご容赦ください。</span><br>
+            <span>作った人：ぐらにゅ(<a href="https://twitter.com/gurany_tou">@gurany_tou</a>)</span>
+          </div>
+        </fieldset>
+        <fieldset>
+          <span>HELLの出現確率は以下のデータを利用させていただきました。</span><br/
+          <span>引用元：</span><a href="https://docs.google.com/spreadsheets/d/13YGRl8khAuHPB6s_-L_UVuk-oMI2YGP_foMSVzadZpE/edit#gid=1271379387">https://docs.google.com/spreadsheets/d/13YGRl8khAuHPB6s_-L_UVuk-oMI2YGP_foMSVzadZpE/edit#gid=1271379387</a>
+        </fieldset>
+    </div>
+
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="knockout-3.2.0.js"></script>
+    <script src="veterans.js" charset="shift_jis"></script>
+    <script src="./veteransViewModel.js" charset="shift_jis"></script>
+</body>
+</html>
